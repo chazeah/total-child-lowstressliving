@@ -1,0 +1,81 @@
+/*
+Theme Name: Low Stress Living
+Theme URI: https://lowstressliving.com
+Description: Total WordPress child theme for LSL
+Author: Charles Walton
+Author URI: http://lowstressliving.com
+Template: Total
+Version: 1.0
+*/
+
+/* Add little space after header (was here) */
+#site-header {
+    margin-bottom: 12px;
+}
+
+/* Main Menu (was here) */
+body .navbar-style-three,
+body.page-header-disabled .navbar-style-three {
+    border: 0;
+}
+
+/* Make About page and Posts more narrow. */
+.single.full-width-main-layout .container,
+.page-id-1255.full-width-main-layout .container {
+    width: 800px;
+}
+
+/* Hide icons next to various links. */
+.meta-date .fa-clock-o {
+    display: none;
+}
+
+/* Make buttons smaller. */
+.theme-button {
+    font-size: 14px;
+}
+
+/* Hide gray line in Related Content header. */
+.theme-heading span.text:after {
+    display: none;
+}
+
+/* Make 'related articles' links standard style. */
+.overlay-title-center {
+    font-size: 22px;
+    text-transform: none;
+    font-weight: inherit;
+    letter-spacing: inherit;
+}
+
+
+/* Ensure header fits on mobile. */
+@media only screen and (max-width: 959px) {
+    #site-logo a.site-logo-text {
+        font-size: 24px !important;
+        white-space: nowrap;
+  }
+}
+
+/* Hide read more links. */
+.blog-entry-readmore {
+    display: none;
+}
+
+/* Homepage signup form. */
+.mailchimp-signup-form .mc4wp-checkbox {
+    display: none;
+}
+
+/* Push social icons to the right. */
+
+@media only screen and (min-width: 959px) {
+  .icon-float-right {
+      position: absolute !important;
+      right: 0;
+  }
+
+  .icon-float-right + .icon-float-right {
+      right: 30px;
+  }
+}
