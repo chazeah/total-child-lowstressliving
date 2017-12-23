@@ -5,13 +5,8 @@ Description: Total WordPress child theme for LSL
 Author: Charles Walton
 Author URI: https://lowstressliving.com
 Template: Total_nolang_noplug
-Version: 1.0.1
+Version: 1.2
 */
-
-/* Add little space after header (was here) */
-#site-header {
-    margin-bottom: 12px;
-}
 
 /* Main Menu (was here) */
 body .navbar-style-three,
@@ -27,11 +22,6 @@ body.page-template-default:not(.home) .container {
 /* Hide icons next to various links. */
 .meta-date .fa-clock-o {
     display: none;
-}
-
-/* Make buttons smaller. */
-.theme-button {
-    font-size: 14px;
 }
 
 /* Hide gray line in Related Content header. */
