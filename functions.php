@@ -20,6 +20,18 @@
  * @link http://codex.wordpress.org/Child_Themes
  */
 function total_child_enqueue_parent_theme_style() {
-	wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css', array(), WPEX_THEME_VERSION );
+    wp_enqueue_style(
+        'parent-style',
+        get_template_directory_uri() . '/style.css',
+        array(),
+        WPEX_THEME_VERSION
+    );
+    wp_enqueue_style(
+        'wpex-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        array(),
+        wp_get_theme()->get('Version')
+    );
 }
+
 add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
