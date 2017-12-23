@@ -19,9 +19,8 @@ body.page-header-disabled .navbar-style-three {
     border: 0;
 }
 
-/* Make About page and Posts more narrow. */
-.single.full-width-main-layout .container,
-.page-id-1255.full-width-main-layout .container {
+/* Make all non-homepages more narrow. */
+body.page-template-default:not(.home) .container {
     width: 800px;
 }
 
