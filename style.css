@@ -5,13 +5,18 @@
  Author: Charles Walton
  Author URI: https://lowstressliving.com
  Template: Total_nolang_noplug
- Version: 1.2.6
+ Version: 1.2.7
 */
 
-/* Main Menu (was here) */
+/* Main Menu */
 body .navbar-style-three,
 body.page-header-disabled .navbar-style-three {
-    border: 0;
+    border-top: 0;
+    border-bottom: 1px solid #eee !important;
+}
+
+#site-navigation .dropdown-menu a {
+    font-variant: small-caps;
 }
 
 /* Make all non-homepages more narrow. */
@@ -105,5 +110,10 @@ body.full-width-main-layout:not(.home) .container {
       opacity: 1;
       pointer-events: auto;
       transition-delay: 0.1s;
+  }
+
+  /* Space out content. */
+  .site-main {
+      margin-top: 35px;
   }
 }
