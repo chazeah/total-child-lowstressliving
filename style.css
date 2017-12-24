@@ -5,7 +5,7 @@
  Author: Charles Walton
  Author URI: https://lowstressliving.com
  Template: Total_nolang_noplug
- Version: 1.2.5
+ Version: 1.2.6
 */
 
 /* Main Menu (was here) */
@@ -60,9 +60,9 @@ body.full-width-main-layout:not(.home) .container {
     display: none;
 }
 
-/* Push social icons to the right. */
-
+/* On Desktop... */
 @media only screen and (min-width: 959px) {
+  /* In main menu, push social icons to the right. */
   .icon-float-right {
       position: absolute !important;
       right: 0;
@@ -70,5 +70,40 @@ body.full-width-main-layout:not(.home) .container {
 
   .icon-float-right + .icon-float-right {
       right: 30px;
+  }
+
+  .icon-float-left {
+      position: absolute !important;
+      left: 0;
+  }
+
+  /* Don't display text labels on desktop. */
+  .menu-item-label {
+      display: none;
+  }
+
+  .home-icon > a {
+      background: url('https://lowstressliving.com/wp-content/uploads/2017/12/favicon-72x72.png') no-repeat 10px 8px;
+      background-size: 36px 36px;
+  }
+
+  /* Make existing elements within the home icon invisible. */
+  .home-icon * {
+      background-color: transparent !important;
+      color: transparent;
+      font-size: 11px;
+  }
+
+  .home-icon {
+      transition: opacity .1s linear;
+      opacity: 0;
+      pointer-events: none;
+  }
+
+  /* Only reveal home icon on sticky state. */
+  .is-sticky .home-icon {
+      opacity: 1;
+      pointer-events: auto;
+      transition-delay: 0.1s;
   }
 }
