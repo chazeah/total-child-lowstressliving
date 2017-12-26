@@ -5,7 +5,7 @@
  Author: Charles Walton
  Author URI: https://lowstressliving.com
  Template: Total_nolang_noplug
- Version: 1.2.8
+ Version: 1.2.9
 */
 
 /* Main Menu */
@@ -110,7 +110,41 @@ body.full-width-main-layout:not(.home) .container {
     }
 
     .mailchimp-signup-form .wpcf7-email {
-        margin-bottom: 10px;
+        margin-bottom: 10px !important;
+    }
+
+    /* Mobile menu. */
+    #wpex-mobile-menu-navbar {
+        background-color: transparent;
+        border-bottom: 1px solid #eee;
+        border-top: 1px solid #eee;
+        margin-bottom: 25px;
+    }
+
+    #wpex-mobile-menu-navbar .mobile-menu-toggle {
+        color: black;
+        text-align: center;
+    }
+
+    /* Mobile overlay nav. */
+    .full-screen-overlay-nav-ul li a {
+        font-size: 20px;
+        margin-bottom: 9px;
+        text-transform: lowercase;
+        font-variant: small-caps;
+    }
+
+    .full-screen-overlay-nav-ul {
+        padding: 50px;
+    }
+
+    .full-screen-overlay-nav .full-screen-overlay-nav-close {
+        height: 30px;
+        width: 30px;
+    }
+
+    .full-screen-overlay-nav.white .full-screen-overlay-nav-close {
+        background-size: contain;
     }
 }
 
