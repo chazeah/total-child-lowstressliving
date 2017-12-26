@@ -5,7 +5,7 @@
  Author: Charles Walton
  Author URI: https://lowstressliving.com
  Template: Total_nolang_noplug
- Version: 1.2.7
+ Version: 1.2.8
 */
 
 /* Main Menu */
@@ -47,14 +47,6 @@ body.full-width-main-layout:not(.home) .container {
   display: none;
 }
 
-/* Ensure header fits on mobile. */
-@media only screen and (max-width: 959px) {
-    #site-logo a.site-logo-text {
-        font-size: 24px !important;
-        white-space: nowrap;
-  }
-}
-
 /* Hide read more links. */
 .blog-entry-readmore {
     display: none;
@@ -65,55 +57,123 @@ body.full-width-main-layout:not(.home) .container {
     display: none;
 }
 
+.mailchimp-signup-form {
+    position: relative;
+}
+
+.mailchimp-signup-form p {
+    margin: 0;
+}
+
+.mailchimp-signup-form .wpcf7-email {
+    border-radius: 3px;
+    border-width: 1px !important;
+    margin-right: 15px;
+    margin: 0;
+    padding: 3px 11px;
+    position: relative;
+    top: 1px;
+}
+
+/* Email capture validation. */
+.mailchimp-signup-form .wpcf7-response-output {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.wpcf7-validation-errors {
+    color: #b5232e;
+}
+
+.wpcf7-mail-sent-ok {
+    color: #1a6a14;
+}
+
+.wpcf7 .wpcf7-not-valid {
+    border-color: #b5232e;
+}
+
+/* On Mobile... */
+@media only screen and (max-width: 959px) {
+    /* Ensure header fits on mobile. */
+    #site-logo a.site-logo-text {
+        font-size: 24px !important;
+        white-space: nowrap;
+    }
+
+    /* Mobile email capture tweaks. */
+    .mailchimp-signup-text {
+        margin-bottom: 10px;
+    }
+
+    .mailchimp-signup-form .wpcf7-email {
+        margin-bottom: 10px;
+    }
+}
+
 /* On Desktop... */
 @media only screen and (min-width: 959px) {
-  /* In main menu, push social icons to the right. */
-  .icon-float-right {
-      position: absolute !important;
-      right: 0;
-  }
+    /* In main menu, push social icons to the right. */
+    .icon-float-right {
+        position: absolute !important;
+        right: 0;
+    }
 
-  .icon-float-right + .icon-float-right {
-      right: 30px;
-  }
+    .icon-float-right + .icon-float-right {
+        right: 30px;
+    }
 
-  .icon-float-left {
-      position: absolute !important;
-      left: 0;
-  }
+    .icon-float-left {
+        position: absolute !important;
+        left: 0;
+    }
 
-  /* Don't display text labels on desktop. */
-  .menu-item-label {
-      display: none;
-  }
+    /* Don't display text labels on desktop. */
+    .menu-item-label {
+        display: none;
+    }
 
-  .home-icon > a {
-      background: url('https://lowstressliving.com/wp-content/uploads/2017/12/favicon-72x72.png') no-repeat 10px 8px;
-      background-size: 36px 36px;
-  }
+    .home-icon > a {
+        background: url('https://lowstressliving.com/wp-content/uploads/2017/12/favicon-72x72.png') no-repeat 10px 8px;
+        background-size: 36px 36px;
+    }
 
-  /* Make existing elements within the home icon invisible. */
-  .home-icon * {
-      background-color: transparent !important;
-      color: transparent;
-      font-size: 11px;
-  }
+    /* Make existing elements within the home icon invisible. */
+    .home-icon * {
+        background-color: transparent !important;
+        color: transparent;
+        font-size: 11px;
+    }
 
-  .home-icon {
-      transition: opacity .1s linear;
-      opacity: 0;
-      pointer-events: none;
-  }
+    .home-icon {
+        transition: opacity .1s linear;
+        opacity: 0;
+        pointer-events: none;
+    }
 
-  /* Only reveal home icon on sticky state. */
-  .is-sticky .home-icon {
-      opacity: 1;
-      pointer-events: auto;
-      transition-delay: 0.1s;
-  }
+    /* Only reveal home icon on sticky state. */
+    .is-sticky .home-icon {
+        opacity: 1;
+        pointer-events: auto;
+        transition-delay: 0.1s;
+    }
 
-  /* Space out content. */
-  .site-main {
-      margin-top: 35px;
-  }
+    /* Space out content. */
+    .site-main {
+        margin-top: 35px;
+    }
+
+    /* Desktop email capture tweaks. */
+    .mailchimp-signup-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mailchimp-signup-text {
+        margin-right: 30px;
+    }
 }
