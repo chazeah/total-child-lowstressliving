@@ -14,11 +14,8 @@
  *
  */
 
-/**
- * Load the parent style.css file
- *
- * @link http://codex.wordpress.org/Child_Themes
- */
+/* Load child styles. */
+add_action('wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style');
 function total_child_enqueue_parent_theme_style() {
     wp_enqueue_style(
         'parent-style',
@@ -34,4 +31,24 @@ function total_child_enqueue_parent_theme_style() {
     );
 }
 
-add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
+// Remove built-in RSS feeds.
+add_action('after_setup_theme', 'lowstressliving_setup' , 11);
+function lowstressliving_setup() {
+    remove_theme_support('automatic-feed-links');
+}
+
+// Remove URL field from comments.
+add_filter('comment_form_default_fields', 'remove_url_comments');
+function remove_url_comments($fields) {
+    unset($fields['url']);
+    return $fields;
+}
+
+// Enable shortcodes in text widgets.
+add_filter('widget_text', 'do_shortcode');
+
+// Add custom RSS link.
+add_action('wp_head', 'add_lowstressliving_rss_link');
+function add_lowstressliving_rss_link() {
+    echo '<link rel="alternate" type="application/rss+xml" title="Low Stress Living" href="https://lowstressliving.com/feed/"' . " />\n";
+}
