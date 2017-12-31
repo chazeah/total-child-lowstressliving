@@ -5,7 +5,7 @@
  Author: Charles Walton
  Author URI: https://lowstressliving.com
  Template: Total_nolang_noplug
- Version: 1.2.19
+ Version: 1.2.20
 */
 
 /* Main Menu */
@@ -123,6 +123,39 @@ body.full-width-main-layout:not(.home) .container {
 
 .homepage-about-widget {
     margin: 0 15px;
+}
+
+/* Homepage above-the-fold content boxes. */
+.vcex-ib-content {
+    background-color: rgba(255, 255, 255, .8);
+        padding: 30px 25px;
+    border: 1px solid rgba(255, 255, 255, .7);
+}
+
+/* Blog entries list used on homepage and article pages. */
+.entries.left-thumbs .blog-entry.thumbnail-entry-style {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.entries.left-thumbs .entry .entry-media {
+    margin-bottom: 0;
+}
+
+.blog-entry-excerpt {
+    margin-bottom: 0;
+}
+
+/* Applied only on screen smaller than typical mobile; when image media linearizes with blurbs. */
+@media only screen and (min-width: 767px) {
+    .blog-entry-inner {
+        display: flex;
+        align-items: center;
+    }
+
+    .entries.left-thumbs .entry .entry-media {
+      margin-right: 30px;
+  }
 }
 
 /* On Mobile... */
