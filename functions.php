@@ -58,7 +58,7 @@ add_action('wp_enqueue_scripts', 'load_lowstressliving_fonts');
 function load_lowstressliving_fonts() {
     wp_enqueue_style(
         'lowstressliving-fonts',
-        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,600i|Unna:400|Work+Sans:400',
+        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i|Unna:400|Work+Sans:400',
         false
     );
 }

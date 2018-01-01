@@ -5,7 +5,7 @@
  Author: Charles Walton
  Author URI: https://lowstressliving.com
  Template: Total_nolang_noplug
- Version: 1.2.21
+ Version: 1.2.22
 */
 
 /* Set up fonts. */
@@ -14,11 +14,14 @@ body {
 }
 
 .single-post-title,
-.blog-entry-title {
+.blog-entry-title,
+.overlay-title-center {
     font-family: 'Unna', serif;
 }
 
-.main-navigation {
+.main-navigation,
+.mobile-menu-toggle,
+.full-screen-overlay-nav-ul {
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -27,10 +30,6 @@ body .navbar-style-three,
 body.page-header-disabled .navbar-style-three {
     border-top: 0;
     border-bottom: 1px solid #eee !important;
-}
-
-#site-navigation .dropdown-menu a {
-    font-variant: small-caps;
 }
 
 /* Make all non-homepages more narrow. */
@@ -108,7 +107,6 @@ body.full-width-main-layout:not(.home) .container {
 .overlay-title-center {
     background-color: rgba(255, 255, 255, .3);
     color: #000;
-    font-family: Unna;
     font-size: 22px;
 }
 
@@ -142,7 +140,7 @@ body.full-width-main-layout:not(.home) .container {
 /* Homepage above-the-fold content boxes. */
 .vcex-ib-content {
     background-color: rgba(255, 255, 255, .8);
-        padding: 30px 25px;
+    padding: 30px 25px;
     border: 1px solid rgba(255, 255, 255, .7);
 }
 
@@ -202,12 +200,10 @@ body.full-width-main-layout:not(.home) .container {
 
     #wpex-mobile-menu-navbar .mobile-menu-toggle {
         color: black;
-        font-size: 20px;
-        font-variant: small-caps;
-        font-weight: 300;
-        line-height: 45px;
+        font-size: 15px;
+        line-height: 50px;
         text-align: center;
-        text-transform: lowercase;
+        text-transform: uppercase;
     }
 
     #wpex-mobile-menu-navbar .mobile-menu-toggle .fa {
@@ -217,10 +213,7 @@ body.full-width-main-layout:not(.home) .container {
 
     /* Mobile overlay nav. */
     .full-screen-overlay-nav-ul li a {
-        font-size: 20px;
         margin-bottom: 9px;
-        text-transform: lowercase;
-        font-variant: small-caps;
     }
 
     .full-screen-overlay-nav-ul {
