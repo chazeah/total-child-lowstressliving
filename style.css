@@ -5,23 +5,16 @@
  Author: Charles Walton
  Author URI: https://lowstressliving.com
  Template: Total_nolang_noplug
- Version: 1.2.26
+ Version: 1.2.27
 */
 
-/* Set up fonts. */
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.single-post-title,
-.blog-entry-title,
+/* "Related content" widget. */
 .overlay-title-center {
     font-family: 'Unna', serif;
 }
 
-.main-navigation,
-.mobile-menu-toggle,
-.full-screen-overlay-nav-ul {
+/* "Menu" button on mobile. */
+.mobile-menu-toggle {
     font-family: 'Work Sans', sans-serif;
 }
 
