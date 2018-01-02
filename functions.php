@@ -62,3 +62,8 @@ function load_lowstressliving_fonts() {
         false
     );
 }
+
+// Add custom font to font settings
+function wpex_add_custom_fonts() {
+    return array('Unna', 'Work Sans', 'Source Sans Pro');
+}
