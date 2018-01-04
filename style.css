@@ -5,7 +5,7 @@
  Author: Charles Walton
  Author URI: https://lowstressliving.com
  Template: Total_nolang_noplug
- Version: 1.2.28
+ Version: 1.2.29
 */
 
 /* "Related content" widget. */
@@ -119,6 +119,45 @@ body.full-width-main-layout:not(.home) .container {
 /* Don't need their helper buttons. */
 .post-edit {
     display: none;
+}
+
+/* Add line to end of articles. */
+.single-blog-content {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 40px;
+}
+
+/* Format the "tags" section in a sane way. */
+.post-tags:before {
+    display: block;
+    content: "Tagged";
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.post-tags a {
+    border-radius: 3px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Keep comments and related posts section properly spaced. */
+#comments .comment-reply-title {
+    font-size: 22px;
+}
+
+#comments p.comment-notes {
+    margin: 3px 0 20px;
+}
+
+.related-posts {
+    margin-bottom: 10px;
+}
+
+.related-posts-title {
+    font-size: 22px;
+    margin-bottom: 10px
 }
 
 /* Hide final border in article list. */
