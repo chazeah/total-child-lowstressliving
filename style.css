@@ -5,7 +5,7 @@
  Author: Charles Walton
  Author URI: https://lowstressliving.com
  Template: Total
- Version: 1.2.31
+ Version: 1.2.32
 */
 
 /* "Related content" widget. */
@@ -94,6 +94,34 @@ body.full-width-main-layout:not(.home) .container {
 
 .wpcf7 .wpcf7-not-valid {
     border-color: #b5232e;
+}
+
+/* Page numbers. */
+.vcex-post-type-archive a.page-numbers,
+.vcex-post-type-archive span.page-numbers {
+    background: #f7f7f7;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    color: #222;
+    font-size: 18px;
+    padding: 9px 18px;
+    transition: 0.15s all ease;
+}
+
+.vcex-post-type-archive .page-numbers.current {
+    /* All !importants required to override theme. */
+    background: #db805e !important;
+    border-color: #db805e !important;
+    color: #fff !important;
+}
+
+.vcex-post-type-archive a.page-numbers:hover,
+.vcex-post-type-archive span.page-numbers:focus,
+.vcex-post-type-archive .page-numbers.current:hover,
+.vcex-post-type-archive .page-numbers.current:focus {
+    background: #db896b !important;
+    border-color: #db896b !important;
+    color: #fff !important;
 }
 
 /* Related articles section. */
